@@ -11,7 +11,7 @@ export const List = styled.ul`
   margin-left:auto;
   margin-right:auto;
 `;
-export const Item = styled.li`
+export const FriendListItem = styled.li`
   display: flex;
   align-items: center;
   box-shadow: 0 0 10px #c6cccced;
@@ -36,7 +36,7 @@ export const Status = styled.span`
   height: 30px;
   border-radius: 50%;
   margin-right: 20px;
-  background-color: ${props => (props.isOnline === 'true' ? 'green' : 'red')}
+  background-color: ${props => (props.isOnline  ? 'green' : 'red')}
 `;
 
 
