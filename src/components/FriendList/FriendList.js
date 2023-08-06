@@ -1,6 +1,7 @@
 import propTypes from 'prop-types';
 import {List, Item, Status, Avatar, Name} from './FriendList.styled';
 
+
 export const FriendList = ({ friends }) => {
     return (
         <List >

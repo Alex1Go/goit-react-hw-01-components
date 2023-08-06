@@ -19,24 +19,25 @@ export const Title = styled.h2`
 export const List = styled.ul`
  display: flex;
  flex-direction: row;
- justify-content: space-evenly;
+ //justify-content: space-evenly;
 `;
 export const Item = styled.li`
   display: flex;
   flex-direction: column;
   padding: 10px;
-  width: inherit;
+  width: 74px;
   align-items: center;
+  color: white;
 `;
 export const Label = styled.span`
   font-weight: 700;
   font-size: 20px;
-  color: #524a4d8b;
+  // color: #524a4d8b;
   margin-bottom: 5px;
 `;
 export const Percentage = styled.span`
   font-weight: 800;
   font-size: 20px;
-  color: #524a4d;
+  //color: #524a4d;
 `;
 

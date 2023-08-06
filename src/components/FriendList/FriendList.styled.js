@@ -19,15 +19,27 @@ export const Item = styled.li`
    width: 350px;
    margin-bottom: 10px;
 `;
+
+// const changeStatus = props => {
+//   switch (props.isOnline) {
+//      case 'true':
+//        return 'green';
+//      case 'false':
+//        return 'red';
+//      default:
+//        return 'black';
+//   }
+// }
+
 export const Status = styled.span`
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin-right: 20px;
-   background-color: green;
-
-   
+  background-color: ${props => (props.isOnline === 'true' ? 'green' : 'red')}
 `;
+
+
 export const Avatar = styled.img`
   width: 70px;
   margin-right: 10px;
