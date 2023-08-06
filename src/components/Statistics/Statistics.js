@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
- 
+import {Card, List, Title, Item, Label, Percentage } from './Statistics.styled'; 
 // function randomColor() {
 // 	let color = '#' + Math.random().toString(16).slice(3, 9);
 // }
@@ -13,20 +13,20 @@ function randomColor() {
 };
 
 export const Statistics = ({ title, stats }) => {
-    return (
-        <section >
-            <h2 >{title}</h2>
+  return (
+    <Card >
+      <Title >{title}</Title>
 
-            <ul >
-                {stats.map(stat => (
-                    <li key={stat.id}>
-                        <span >{stat.label}</span>
-                        <span >{stat.percentage}%</span>
-                    </li>
-                ))}
-            </ul>
-        </section>
-    )
+      <List >
+        {stats.map(stat => (
+          <Item key={stat.id}>
+            <Label >{stat.label}</Label>
+            <Percentage >{stat.percentage}%</Percentage>
+          </Item>
+        ))}
+      </List>
+    </Card>
+  );
 };
 
 Statistics.propTypes = {
