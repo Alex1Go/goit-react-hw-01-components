@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import {Card, List, Title, Item, Label, Percentage } from './Statistics.styled'; 
 import { randomColor } from '../Randomcolor';
 
@@ -21,6 +21,9 @@ export const Statistics = ({ title, stats }) => {
 };
 
 Statistics.propTypes = {
-  title: propTypes.string.isRequired,
-  stats: propTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        percentage: PropTypes.string.isRequired
+      })).isRequired,
 };
